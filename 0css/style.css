@@ -1,0 +1,793 @@
+:root{
+  --bg-color: rgb(57, 155, 240); ;
+}
+  *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* header */
+.header {
+  padding: 20px 30px;
+  height: auto;
+  display: flex;
+  background-color:aliceblue;
+}
+.logo{
+  z-index: 99;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+.a{
+  color: black;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 5px 10px;
+  text-transform: capitalize;
+}
+
+.a:hover{
+  background-color: rgb(234, 234, 234);
+}
+
+#buttonindex {
+  text-transform: capitalize;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 5px;
+  justify-content: flex-end;
+}
+
+.btn{
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonlogin{
+  padding: 4px 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  text-transform: capitalize;
+}
+.hamburger{
+  display: block;
+  width: 35px;
+  cursor: pointer;
+  appearance: none;
+  outline: none;
+  border: none;
+  z-index: 99;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+}
+
+.hamburger .bar, .hamburger:after, .hamburger:before{
+  content: '';
+  display: block;
+  width: 15px;
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  margin: 3px 0px;
+  transition: 0.4s;
+}
+
+.hamburger.is-active::before{
+  transform: rotate(-45deg) translate(-3px,4px);
+}
+
+.hamburger.is-active .bar{
+  opacity: 0;
+}
+.hamburger.is-active::after{
+  transform: rotate(45deg) translate(-3px,-4px);
+}
+
+.mobile-nav{
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  z-index: 98;
+  background-color: aliceblue;
+  padding-top: 120px;
+  transition: 0.4s;
+}
+
+.mobile-nav.is-active{
+  left: 0;
+}
+.hamburger.is-active{
+  color: white;
+}
+
+.mobile-nav a{
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  margin: 0 auto 16px;
+  padding: 12px 16px;
+  background-color: rgb(30, 0, 61);
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.mobile-nav a:hover{
+  background-color: rgb(33, 0, 63);
+  color: white;
+}
+
+/* silder section */
+.slider {
+  padding: 10px 20px;
+  display: flex;
+  gap: 5px;
+  background-color: aliceblue;
+  overflow: scroll;
+  justify-content: space-between;
+  margin: 2px  0px;
+}
+
+.slider-font{
+  font-size: 10px;
+  font-weight: 100;
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+
+.sliderbox-1, .sliderbox-2, .sliderbox-3, .sliderbox-4, .sliderbox-5, .sliderbox-6, .sliderbox-7, .sliderbox-8, .sliderbox-9, .sliderbox-10{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1px;
+}
+
+.slide-a{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slide-p{
+  padding: 2px 0px;
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+  text-transform: capitalize;
+  font-weight: 100;
+}
+
+/* banner section */
+.banner{
+  font-size: 15px;
+  color: white;
+  width: 100%;
+  padding: 10px 20px;
+  text-transform: capitalize;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #389af0;
+  cursor: pointer;
+}
+
+/* assurance section */
+.assurance{
+  padding: 10px 20px;
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.assurance-logos{
+  display: flex;
+  width: 100%;
+  background-color: rgb(240, 248, 255);
+}
+
+.i-logo{
+  font-size: 15px;
+}
+
+.p-logo{
+  font-size: 15px;
+  text-transform: capitalize ;
+  font-weight: 500;
+  width: 100%;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+/* mobile accesories-section and home appliances and clothing section*/
+.box1-1{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 10px 20px;
+  gap: 5px;
+  background-color: aliceblue;
+}
+.box1-2{
+  font-size: 12px;
+  text-transform: capitalize;
+}
+.box1-3{
+  display: flex;
+  overflow: scroll;
+  gap: 5px;
+}
+.box1-4{
+  padding: 5px;
+  background-color: white;
+}
+
+/* for clothes collection */
+.box2-1{
+  border: 2px solid white;
+  background-color: aliceblue;
+  padding: 10px 20px;
+}
+.box2-2{
+  font-size: 12px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.box2-3{
+  gap: 5px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.box2-4{
+  text-transform: capitalize;
+}
+.box2-5{
+  width: 100%;
+}
+
+/* smartphone brands */
+.brands{
+  width: auto;
+  padding: 20px 30px;
+  border: 2px solid white;
+  background-color: aliceblue;
+}
+
+.brand-header{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.brandscroll{
+  display: flex;
+  overflow: scroll;
+  padding: 10px 5px;
+  background-color: white;
+  gap: 5px;
+  justify-content: space-evenly;
+}
+
+.b-img{
+  height: 100px;
+}
+
+.b-img:hover{
+  border: 2px solid rgba(202, 202, 202, 0.382);
+}
+
+/*  */
+.listbox{
+  padding: 10px 20px;
+ background-color: aliceblue;
+ border: 1px solid white;
+ display: flex;
+ flex-direction: column;
+ height: auto;
+ overflow: hidden;
+}
+.listboxheader{
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.homeheader{
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.homeitems{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+}
+  .home-content{
+    padding: 10px 20px;
+    margin: 5px 0px;
+    background-color: aliceblue;
+  }
+  .homecontentbox{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: white;
+    gap: 5px;
+}
+
+.homebox{
+  display: flex;
+  flex-direction: column;
+}
+  .homeboximg{
+    width: 150px;
+  }
+
+.listboxitems{
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 5px;
+}
+.listboxcolumns{
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  background-color: rgb(252, 252, 252);
+  box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.405);
+}
+.listbox-a{
+  display: flex;
+  justify-content: center;
+}
+.listboxesimg{
+  width: 150px;
+  background-color: aliceblue;
+  width: auto;
+}
+.listboximgname{
+  padding: 0px 10px;
+  font-weight: 800;
+  text-transform: capitalize;
+  font-size: 10px;
+}
+
+
+.maincontent {
+  border: 2px solid white;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 30px;
+  background-color: aliceblue;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.boxheader {
+  font-weight: bold;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  font-size: 12px;
+}
+
+.box-section {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+
+.boxcontent {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: white;
+  justify-content: start;
+}
+
+.boxcontentimg img {
+  color: aqua;
+  height: 100px;
+}
+
+.contentboximg{
+  width: 150px;
+}
+.contentitems{
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+}
+.contentcolumns{
+  width: max-content;
+  padding: 5px;
+  background-color: white;
+}
+.contentname{
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.boxcontentheader {
+  width: max-content;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.boxcontentpara {
+  font: caption;
+  font-size: 8px;
+}
+
+.category{
+  gap: 5px;
+  padding: 10px 30px;
+  background-color: aliceblue;
+}
+
+.category-item{
+  background-color: white;
+  height: auto;
+  margin: 5px 0px;}
+
+  .box1:hover{
+  padding: 5px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.category-header{
+  padding: 2px 2px;
+  text-transform: capitalize;
+  background-color: aliceblue;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+}
+.category-box{
+  background-color: aliceblue;
+  padding: 0px 10px;
+  gap: 5px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+/* diffrent categories */
+.box1{
+  width: auto;
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  font-weight:400;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.a-box1{
+  color: black;
+  text-decoration: none;
+  display: flex;
+  width: auto;
+}
+
+/* for apple.html */
+.companyheader{
+  padding: 10px 30px;
+  text-transform: capitalize;
+  font-weight: bold;
+  background-color: aliceblue;
+}
+
+/* LOGIN and SIGNUP*/
+.details-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.details-container{
+  height: auto;
+  border: 2px solid #c9c9c974;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+}
+
+.details-header{
+  padding: 10px 0px;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.details-box{
+  display: flex;
+  flex-direction: column;
+}
+
+.details-box label{
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 10px;
+  margin: 8px 0px 0px 0px;
+}
+
+.details-box input{
+  padding: 8px 5px;
+  text-transform: capitalize;
+  font-size: 10px;
+}
+
+#details-button{
+  background-color: black;
+  margin: 10px 0px 2px 0px;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.details-p{
+  padding-top: 2px;
+  margin: 0 auto;
+  font-size: 10px;
+  text-transform: capitalize;
+  justify-content: space-between;
+}
+
+.details-a{
+  padding-left: 15px;
+  color: blue;
+}
+.details-a:hover{
+  text-decoration: underline;
+}
+
+/* APPLIANCESS */
+.box1-1{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 10px 20px;
+  gap: 5px;
+  background-color: aliceblue;
+}
+.box1-2{
+  font-size: 12px;
+  text-transform: capitalize;
+}
+.box1-3{
+  display: flex;
+  overflow: scroll;
+  gap: 5px;
+}
+.box1-4{
+  padding: 5px;
+  background-color: white;
+
+}
+
+/* groceries */
+.box3-2{
+  background-color: aliceblue;
+  padding: 20px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.box3-3{
+  background-color: #389af0;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.box3-3 a{
+  color: white;
+  text-transform: capitalize;
+
+}
+.box3-4{
+  background-color: var(--bg-color);
+  height: auto;
+  margin: 2px 0px;
+}
+
+/* about us */
+.aboutus-box{
+  padding: 0px 20px;
+  
+}
+
+.aboutus-header{
+  padding: 10px 20px;
+  font-weight:300;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 30px;
+}
+
+.aboutus-content{
+  padding: 5px 0px;
+  margin: 0px 0px 10px 0px;
+}
+
+.aboutus-h4{
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.aboutus-p{
+  font-size: 12px;
+  font-weight: 200;
+}
+
+strong{
+  font-weight: 500;
+}
+
+/* contact us */
+.contactus-page{
+  padding: 10px 20px;
+  height: 100vh;
+  position: static;
+}
+
+.contactus-form{
+  padding: 20px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgba(128, 128, 128, 0.326);
+  top: 150px;
+  position: relative;
+}
+.contactus-header{
+  font-size: 25px;
+  text-transform: capitalize;
+  padding: 10px 5px;
+}
+
+
+.contactus-details{
+  padding: 0px 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
+
+.contactus-details label{
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.contactus-details input{
+  padding:10px;
+  text-transform: capitalize;
+  width: 400px;
+}
+
+.contactus-button{
+  margin: 0px 5px 0px 5px;
+  text-transform: capitalize;
+  color: white;
+  border: none;
+  background-color: black;
+  padding: 10px 0px;
+}
+
+/*  */
+.category-container{
+  height: auto;
+}
+
+.category-h1{
+  text-transform: uppercase;
+  font-family: sans-serif;
+  display: flex;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+}
+
+.container-content{
+  gap: 5px;
+  width: 100%;
+  align-content: space-around;
+  padding: 10px 20px;
+  height: auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: #d0e9ff;
+  height: auto;
+}
+
+.containeritem{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 1px 1px rgba(150, 150, 150, 0.529);
+  height: auto;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.containerimg{
+  height: 100px;
+}
+.containerp{
+  padding-top:5px;
+  font-weight: 100;
+}
+
+/* appliances */
+.container{
+  padding: 0px 20px;
+}
+
+.containerheader{
+  padding: 10px 0px;
+  text-transform: capitalize;
+  font-size: 25px;
+}
+
+.container1{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  height: auto;
+}
+
+.containerbox{
+  display: flex;
+  gap: 10px;
+  overflow: scroll;
+  margin: 0 auto;
+}
+
+.containerbox1{
+  border: 1px solid rgba(57, 57, 57, 0.222);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+}
